@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inventory</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="/logo.png" />
+<meta name="theme-color" content="#ff6f61" />
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory</h1>
+    <form id="productForm">
+      <input type="text" id="productName" placeholder="Product Name" required />
+      <select id="productType" required>
+        <option value="" disabled selected>Select Type</option>
+        <option value="kg">Kg</option>
+        <option value="packet">Packet</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="number" id="productQuantity" placeholder="Quantity" required />
+      <input type="file" id="productImage" accept="image/*" />
+      <button type="submit">Add Product</button>
+    </form>
+
+    <h2>My Inventory</h2>
+    <div id="productList" class="product-list"></div>
+
+    <h2>Need to Buy (Cart)</h2>
+    <div id="cartList" class="product-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
